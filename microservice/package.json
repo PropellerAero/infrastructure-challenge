@@ -1,0 +1,17 @@
+{
+  "name": "web-service",
+  "version": "1.0.0",
+  "description": "A simple service for serving web content",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "koa": "^2.5.3",
+    "node-fetch": "^2.2.0",
+    "nodemon": "^1.18.4"
+  }
+}

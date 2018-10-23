@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>The monolith</title>
+</head>
+
+<body>
+    You are logged in!
+    <br />
+    <br />
+    Checking that we can make authorized calls to the monolith:
+    <div id="monolithResponse">Loading...</div>
+    <br />
+    Checking that we can make authorized calls to the microservice:
+    <div id="microserviceResponse">Loading...</div>
+
+
+    <script>
+        const MICROSERVICE_ENDPOINT = '/microservice/';
+        const MICROSERVICE_ELEM_ID = 'microserviceResponse';
+
+        const MONOLITH_ENDPOINT = '/api/current_user/';
+        const MONOLITH_ELEM_ID = 'monolithResponse';
+
+        const getResponse = async (endpoint, elemId) => {
+            const response = await fetch(endpoint);
+            const text = await response.text();
+            const elem = document.getElementById(elemId);
+            elem.textContent = `${response.status} ${response.statusText}: ${text}`;
+        }
+
+        getResponse(MICROSERVICE_ENDPOINT, MICROSERVICE_ELEM_ID);
+        getResponse(MONOLITH_ENDPOINT, MONOLITH_ELEM_ID);
+
+    </script>
+
+</body>
+
+</html>

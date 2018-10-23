@@ -1,0 +1,21 @@
+version: '3.2'
+
+services:
+  monolith:
+    build: monolith
+    ports:
+      - 8000:8000
+    volumes:
+      - ./monolith:/app
+  microservice:
+    build: microservice
+    ports:
+      - 3000:3000
+    volumes:
+      - ./microservice:/app
+  reverse-proxy:
+    build: reverse-proxy
+    ports:
+      - 5000:5000
+    volumes:
+      - ./reverse-proxy/nginx.conf:/etc/nginx/nginx.conf
