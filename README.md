@@ -46,6 +46,6 @@ Your task is to re-architect the way Lil' Datum Co. handle authentication and au
 - Efficient interservice communication with the ability to easily impersonate a user from either the monolith or the microservice
 - The ability to communicate between services outside the context of a request. e.g. from an asynchronous worker or cron job
 
-You should provide a proof of concept implementation that extends the example implementation and demonstrates some or all of the above. Please provide doucmentation detailing how your solution works, how to set it up and any assumptions or tradeoffs that were made. A network diagram to help explain your solution will be helpful.
+You should provide a proof of concept implementation that extends the example implementation and demonstrates some or all of the above. Please provide documentation detailing how your solution works, how to set it up and any assumptions or tradeoffs that were made. A network diagram to help explain your solution will be helpful.
 
 If you have any questions please feel free to contact keat@propelleraero.com.au
