@@ -11,7 +11,7 @@ The way things are currently set up, a monolithic Django app handles all authent
 The upside of this approach to authentication/authorisation is that it is very easy to implement and leverages the existing capabilities of the monolith. The downsides are that:
 
 - The request to the monolith can be slower than ideal which slows down all requests to the microservices
-- In order to make a request from the monolith to one of the services on behalf of a user, the monolith must create a cookie to send to with the request, which the service then must send back to the monolith for validation.
+- In order to make a request from the monolith to one of the services on behalf of a user, the monolith must create a cookie to send with the request, which the service then must send back to the monolith for validation.
 - The microservice can't make authorized requests to the monolith outside of the context of a user request.
 - Lil' Datum Co. wants to be able to enable single sign on (SSO) across multiple domains and subdomains such as `*.datums.app` and `www.lildatum.co` which is not currently possible with this setup.
 
