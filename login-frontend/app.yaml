@@ -1,0 +1,15 @@
+runtime: python27
+api_version: 1
+service: default
+threadsafe: true
+
+handlers:
+
+# root
+#- url: /auth/login
+  #static_files: auth/login.html
+  #upload: auth/login.html
+
+- url: /(.+)
+  static_files: \1
+  upload: (.+)

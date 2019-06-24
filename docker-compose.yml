@@ -1,6 +1,15 @@
 version: '3.2'
 
 services:
+  login-frontend:
+    build: login-frontend
+    build:
+      context: login-frontend
+      dockerfile: dfile  # Deliberately renamed
+    ports:
+      - 9000:9000
+    volumes:
+      - ./login-frontend:/app
   monolith:
     build: monolith
     ports:
