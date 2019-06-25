@@ -17,7 +17,7 @@ Checking that we can make authorized calls to the microservice:
 ```
 
 ## The OAuth2 Service
-The chosen OAuth2 service is Firebase Auth which makes sense if we want a fully managed product colocated with our application in GCP.
+The chosen OAuth2 service is Firebase Auth which makes sense if we want a fully managed product collocated with our application in GCP.
 
 
 

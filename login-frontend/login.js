@@ -34,8 +34,6 @@ window.onload = () => {
     // Change page on auth events
     firebase.auth().onAuthStateChanged(async (user) => {
       if (user) {
-        hide(logged_out)
-
         let name = user.displayName
 
         /* If the provider gives a display name, use the name for the
@@ -46,6 +44,7 @@ window.onload = () => {
           userIdToken = await user.getIdToken()
           console.log(`Successfully got idToken: ${userIdToken}`)
           document.getElementById('user').innerHTML = welcomeName
+          hide(logged_out)
           show(logged_in)
         } catch (e) {
           console.log(`Error getting idToken: ${e}`)
@@ -60,7 +59,7 @@ window.onload = () => {
   // Configure the drop-in
   const configureFirebaseLoginWidget = () => {
     let uiConfig = {
-      'signInSuccessUrl': '/auth/login.html',
+      'signInSuccessUrl': '/login.html',
       'signInOptions': [
         // Leave the lines as is for the providers you want to offer your users.
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -92,4 +91,9 @@ window.onload = () => {
 
   configureFirebaseLogin()
   configureFirebaseLoginWidget()
+}
+
+// Install servicerWorker if supported on sign-in/sign-up page.
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js', {scope: '/'});
 }

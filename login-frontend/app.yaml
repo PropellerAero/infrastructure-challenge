@@ -6,9 +6,9 @@ threadsafe: true
 handlers:
 
 # root
-#- url: /auth/login
-  #static_files: auth/login.html
-  #upload: auth/login.html
+#- url: /login
+  #static_files: login.html
+  #upload: login.html
 
 - url: /(.+)
   static_files: \1

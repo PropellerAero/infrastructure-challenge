@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+  <script src="firebase-app-config.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css">
+  <script src="login.js"></script>
+  <title>API Auth Gateway</title>
+</head>
+<body>
+  <h1>API Auth Gateway</h1>
+
+  <div id="logged-out" hidden>
+    <h3>Plesae Sign to check Service conectivity</h3>
+    <div id="firebaseui-auth-container"></div>
+  </div>
+
+  <div id="logged-in" hidden>
+    <h3>Welcome, <span id="user"></span>!</h1>
+    <!--<p>Your OAuth2 Access token is: <span id="accesstoken"></span> </p>-->
+    <button id="sign-out">Sign out</button>
+    <br />
+    <br />
+    You are logged in!
+    <br />
+    <br />
+    Checking that we can make authorized calls to the monolith:
+    <div id="monolithResponse">Loading...</div>
+    <br />
+    Checking that we can make authorized calls to the microservice:
+    <div id="microserviceResponse">Loading...</div>
+
+    <script>
+      const MICROSERVICE_ENDPOINT = '/microservice/';
+      const MICROSERVICE_ELEM_ID = 'microserviceResponse';
+
+      const MONOLITH_ENDPOINT = '/api/current_user/';
+      const MONOLITH_ELEM_ID = 'monolithResponse';
+
+      const getResponse = async (endpoint, elemId) => {
+          const response = await fetch(endpoint);
+          const text = await response.text();
+          const elem = document.getElementById(elemId);
+          elem.textContent = `${response.status} ${response.statusText}: ${text}`;
+      }
+
+      // Make Authenticated service calls
+      getResponse(MICROSERVICE_ENDPOINT, MICROSERVICE_ELEM_ID);
+      getResponse(MONOLITH_ENDPOINT, MONOLITH_ELEM_ID);
+
+    </script>
+
+  </div>
+
+</body>
+</html>
