@@ -1,4 +1,7 @@
-FROM python:3.7-alpine
+FROM python:3.7
+# 966MB with DJango
+#FROM python:3.7-alpine
+# 124MB with Django
 
 WORKDIR /app
 
