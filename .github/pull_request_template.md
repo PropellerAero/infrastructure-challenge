@@ -6,7 +6,7 @@
 
 <!--- Provide bullet points that describe the changes that were made, even if they're obvious. This lets the reviewer confirm that the changes do what you say they do. -->
 
-- Change 1
+-   Change 1
 
 ## How to test
 
@@ -22,11 +22,11 @@ GOOD: Added a boolean flag for dealers so that we can provide them custom interf
 
 _Customer Facing Changes_
 
-- Change 1
+-   Change 1
 
 _Internal Changes_
 
-- Change 2
+-   Change 2
 
 ## Screenshots (optional):
 
