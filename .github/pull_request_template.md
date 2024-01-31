@@ -8,9 +8,9 @@
 
 -   Change 1
 
-## How to test
+## Validation & Testing Methodology
 
-<!--- Provide a description on how to test these changes -->
+<!--- Provide a description on how these changes have been tested. This will also inform others on how to test it in case the PR author is away. Paste or attach any output or log snippets, Terraform plans and similar information, if applicable. -->
 
 ## Release notes
 
