@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@propelleraero/github-actions": "10.0.0",
+    "tunnel": "^0.0.6"
+  },
+  "description": "github-actions",
+  "name": "github-actions",
+  "private": true,
+  "scripts": {},
+  "version": "0.0.0"
+}

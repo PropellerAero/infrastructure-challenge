@@ -1,5 +1,5 @@
 # Automatically creates a Product Release PR when anything is committed to master.
-name: production-release-pr
+name: Create Production Release PR
 
 on:
   push:
@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Git clone the repository
+        uses: actions/checkout@v4
 
-      - name: auto-create-pr-action
+      - name: Create Production Release PR
         uses: PropellerAero/auto-create-pr-action@master
         env:
           BRANCH_PREFIX: "master"
