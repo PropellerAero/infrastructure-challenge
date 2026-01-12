@@ -21,3 +21,33 @@ updates:
       interval: "weekly"
       day: "sunday"
       time: "19:00"
+    # Delay version updates by x days after publication to allow time for malicious 
+    # versions to be discovered and removed.
+    cooldown:
+      default-days: 7
+  - package-ecosystem: "pip"
+    directory: "/"
+    # Check the pypi registry for updates on Sunday 7pm UTC / Monday 5am AEST. This
+    # should be out of office hours so as to not block CI but not too long before
+    # people wake up, in case the updates cause issues.
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "19:00"
+    # Delay version updates by x days after publication to allow time for malicious 
+    # versions to be discovered and removed.
+    cooldown:
+      default-days: 7
+  - package-ecosystem: "uv"
+    directory: "/"
+    # Check the pypi registry for updates on Sunday 7pm UTC / Monday 5am AEST. This
+    # should be out of office hours so as to not block CI but not too long before
+    # people wake up, in case the updates cause issues.
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "19:00"
+    # Delay version updates by x days after publication to allow time for malicious 
+    # versions to be discovered and removed.
+    cooldown:
+      default-days: 7
