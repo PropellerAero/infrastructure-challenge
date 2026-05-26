@@ -21,7 +21,7 @@ updates:
       interval: "weekly"
       day: "sunday"
       time: "19:00"
-    # Delay version updates by x days after publication to allow time for malicious 
+    # Delay version updates by x days after publication to allow time for malicious
     # versions to be discovered and removed.
     cooldown:
       default-days: 7
@@ -34,7 +34,7 @@ updates:
       interval: "weekly"
       day: "sunday"
       time: "19:00"
-    # Delay version updates by x days after publication to allow time for malicious 
+    # Delay version updates by x days after publication to allow time for malicious
     # versions to be discovered and removed.
     cooldown:
       default-days: 7
@@ -47,7 +47,7 @@ updates:
       interval: "weekly"
       day: "sunday"
       time: "19:00"
-    # Delay version updates by x days after publication to allow time for malicious 
+    # Delay version updates by x days after publication to allow time for malicious
     # versions to be discovered and removed.
     cooldown:
       default-days: 7
