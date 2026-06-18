@@ -11,7 +11,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "koa": "^2.5.3",
-    "node-fetch": "^2.2.0",
+    "node-fetch": "^2.6.7",
     "nodemon": "^1.18.9"
   }
 }
